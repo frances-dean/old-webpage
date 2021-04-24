@@ -18,6 +18,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat"}
 }
 a:link, a:visited {
 }
+/* text over image */
+.container {
+  position: relative;
+  width: 100%;
+}
+.image {
+  position: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 97%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 </style>
 <body>
     <!--To remove underlines, add: text-decoration: none; to the link {}-->
@@ -116,19 +154,42 @@ a:link, a:visited {
   <div class="w3-padding-32 w3-content" id="sport">
     <h2 class="w3-text-grey">Sport</h2>
     <hr class="w3-opacity">
-<p>NCCA DIII Women's Swimming and Diving Championship Qualifier 200 Breaststroke.</p>
+<p>NCCA DIII Women's Swimming and Diving Championship Qualifier, 200 Breaststroke.</p>
 <p>NESCAC All-American.</p>
 <p>Age Group National Triathlon Qualifier.</p>
+<p>Hike Enthusiast.</P>
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="WilliamsSwimDive.jpeg" style="width:100%">
-        <img src="Triathlon.JPG" style="width:100%">
-      </div>
+        <div class="w3-half">
+          <div class="container">
+            <img src="WilliamsSwimDive.jpeg" style="width:100%">
+            <div class="overlay">
+              <div class="text">Eph pride! Williams defeats Amherst 2016.</div>
+            </div>
+            </div>
+        <div>
+            <div class="container">
+              <img src="Triathlon.JPG" style="width:100%" >
+              <div class="overlay">
+                <div class="text">Traverse City Triathlon 2019.</div>
+              </div>
+              </div>
+    </div>
+        </div>
 
       <div class="w3-half">
-        <img src="MountRainer.jpg" style="width:100%">
-        <img src="SailingLakeMichigan.jpg" style="width:100%">
+          <div class="container">
+            <img src="MountRainer.jpg" style="width:100%" >
+            <div class="overlay">
+              <div class="text">Mount Rainer National Park.</div>
+            </div>
+            </div>
+          <div class="container">
+            <img src="SailingLakeMichigan.jpg" style="width:100%" class="image">
+            <div class="overlay">
+              <div class="text">Sailing on Lake Michigan.</div>
+            </div>
+            </div>
       </div>
     <!-- End photo grid -->
     </div>
