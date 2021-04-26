@@ -212,30 +212,26 @@ a:link, a:visited {
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Seattle, WA</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: frances.e.dean2019@gmail.com</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> frances.e.dean2019@gmail.com</p>
     </div>
     
-    <!-- Contact -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-pink"><b>Contact.</b></h1>
-      <hr style="width:50px;border:5px solid pink" class="w3-round">
-      <p>Interested in purchasing a piece, hiring me for a show, or otherwise want to connect? Send me a message.</p>
-      <form action="/action_page.php" method="get">
-        <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input w3-border" type="text" name="Name" required>
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email" required>
-        </div>
-        <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input w3-border" type="text" name="Message" required>
-        </div>
-        <button type="submit" class="w3-button w3-block w3-padding-large w3-pink w3-margin-bottom">Send Message</button>
-      </form>
-    </div>
+    <!-- Reach out! -->
+    <form
+      action="https://formspree.io/f/xknkgdyv"
+      method="POST">
+      <label>
+        Email:
+        <input type="email" name="_replyto">
+      </label>
+      <label>
+        Message:
+        <textarea name="message"></textarea>
+      </label>
+
+      <!-- your other form fields go here -->
+
+      <button type="submit">Send</button>
+    </form>
     
   <!-- End Contact Section -->
   </div>
